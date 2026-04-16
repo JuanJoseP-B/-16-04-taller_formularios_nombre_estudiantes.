@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Registrar Asistencia{% endblock %}
+
+{% block content %}
+<div class="glass-form-container">
+    <h2 class="form-title">🕒 Registrar Asistencia</h2>
+    <form method="post" class="premium-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn-submit">Registrar Asistencia</button>
+    </form>
+</div>
+{% endblock %}

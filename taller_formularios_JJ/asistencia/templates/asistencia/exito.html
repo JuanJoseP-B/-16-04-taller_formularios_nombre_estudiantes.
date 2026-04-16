@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Asistencia Registrada{% endblock %}
+
+{% block content %}
+<div class="glass-form-container text-center">
+    <h2 class="form-title">✅ ¡Asistencia Confirmada!</h2>
+    <p>La asistencia se ha registrado correctamente en el sistema.</p>
+    <a href="{% url 'registrar_asistencia' %}" class="btn-submit">Registrar otra asistencia</a>
+</div>
+{% endblock %}
