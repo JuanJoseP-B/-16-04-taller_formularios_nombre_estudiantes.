@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Registro Exitoso{% endblock %}
+
+{% block content %}
+<div class="glass-form-container text-center">
+    <h2 class="form-title">✅ ¡Éxito!</h2>
+    <p>Tu solicitud ha sido registrada correctamente en el sistema.</p>
+    <a href="{% url 'registrar_solicitud' %}" class="btn-submit">Registrar otra solicitud</a>
+</div>
+{% endblock %}

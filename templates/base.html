@@ -1,0 +1,122 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Taller Django{% endblock %}</title>
+    <!-- Google Fonts for Clean Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green-dark: #1f3d2b;
+            --green-primary: #2d6a4f;
+            --green-light: #40916c;
+            --green-superlight: #b7e4c7;
+            --bg-color: #f4f9f4;
+            --text-color: #212529;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--bg-color), var(--green-superlight));
+            color: var(--text-color);
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .premium-card, .glass-form-container {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .form-title {
+            color: var(--green-dark);
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 24px;
+            font-size: 1.5rem;
+        }
+
+        .premium-form p {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 16px;
+        }
+
+        .premium-form label {
+            font-size: 0.9rem;
+            color: var(--green-dark);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .premium-form input, .premium-form select, .premium-form textarea {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid rgba(45, 106, 79, 0.2);
+            background: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .premium-form input:focus, .premium-form select:focus, .premium-form textarea:focus {
+            outline: none;
+            border-color: var(--green-primary);
+            box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.1);
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .premium-form input[type="file"] {
+            padding: 8px;
+        }
+
+        .premium-form input[type="checkbox"] {
+            width: auto;
+            margin-top: 8px;
+        }
+
+        .btn-submit {
+            display: inline-block;
+            width: 100%;
+            padding: 12px 24px;
+            background: var(--green-primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.2s ease;
+            margin-top: 16px;
+            box-sizing: border-box;
+        }
+
+        .btn-submit:hover {
+            background: var(--green-dark);
+            transform: translateY(-2px);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    {% block content %}{% endblock %}
+</body>
+</html>
